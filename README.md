@@ -1,0 +1,1 @@
+# Personal terminal_config
