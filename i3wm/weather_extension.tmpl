@@ -1,0 +1,7 @@
+* *    * * *   weather "Ha Noi" | grep Temperature | awk '{ print $4 0 0 0}'| sed 's/\.//g' | sed 's/(//' > /home/quypn/weather
+sudo apt-get install weather-util
+cpu_temperature 1 {
+        format = "<span color='#3366ff'>HaNoi:%degrees°C</span>"
+#       path = "/sys/devices/platform/coretemp.0/temp1_input"
+        path = "/home/quypn/weather"
+}
