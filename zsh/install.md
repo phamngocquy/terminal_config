@@ -35,4 +35,10 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=false
 chsh -s /bin/zsh
 ```
 
+### Install fzf - interactive search bash hitstory
+```
+it clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
 ### REF: [oh-my-zsh](https://caffeinedev.medium.com/customize-your-terminal-oh-my-zsh-on-ubuntu-18-04-lts-a9b11b63f2)
