@@ -37,7 +37,7 @@ chsh -s /bin/zsh
 
 ### Install fzf - interactive search bash hitstory
 ```
-it clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
