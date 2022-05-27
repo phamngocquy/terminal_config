@@ -23,6 +23,7 @@ Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' } " Find file
 Plug 'https://github.com/szw/vim-maximizer' " Maximizer
 Plug 'sbdchd/neoformat'
 Plug 'jiangmiao/auto-pairs' " auto pairs { [ ( ...
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 set encoding=UTF-8
 call plug#end()
@@ -34,12 +35,23 @@ nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 nnoremap <C-f> :LeaderfFile<CR>
 
 
+" Use <c-space> to trigger completion.
+if has('nvim')
+  nnoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+
 
 let g:format_python_autopep8 = {
             \ 'exe': 'autopep8',
             \ 'args': ['-s 4', '-E'],
             \ 'replace': 1,
-            \ 'stdin': 1, 
+            \ 'stdin': 1,
             \ 'env': ["DEBUG=1"],
             \ 'valid_exit_codes': [0, 23],
             \ 'no_append': 1,
