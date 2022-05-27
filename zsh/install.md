@@ -28,6 +28,8 @@ And change and put these lines :
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_DISABLE_RPROMPT=false
 POWERLEVEL9K_PROMPT_ON_NEWLINE=false
+
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
 ```
 
 ### Change your Default Shell
