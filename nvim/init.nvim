@@ -24,6 +24,7 @@ Plug 'https://github.com/szw/vim-maximizer' " Maximizer
 Plug 'sbdchd/neoformat'
 Plug 'jiangmiao/auto-pairs' " auto pairs { [ ( ...
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'ryanoasis/vim-devicons' "Vim icon
 
 set encoding=UTF-8
 call plug#end()
