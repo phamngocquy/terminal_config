@@ -11,4 +11,4 @@ make install
 wget -c https://www.npmjs.org/install.sh | sh
 ```
 
-- chosse nodejs source version: https://nodejs.org/download/release/
+- choose nodejs source version: https://nodejs.org/download/release/
