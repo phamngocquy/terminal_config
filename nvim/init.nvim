@@ -25,6 +25,8 @@ Plug 'sbdchd/neoformat'
 Plug 'jiangmiao/auto-pairs' " auto pairs { [ ( ...
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'ryanoasis/vim-devicons' "Vim icon
+Plug 'rafi/awesome-vim-colorschemes' " Retro Scheme
+Plug 'mhinz/vim-grepper' " Search word in project
 
 set encoding=UTF-8
 call plug#end()
