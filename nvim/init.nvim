@@ -11,6 +11,8 @@
 :nnoremap H gT
 :nnoremap L gt
 
+let mapleader=";"
+
 colorscheme default
 
 call plug#begin()
@@ -34,9 +36,8 @@ call plug#end()
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
-
 nnoremap <C-f> :LeaderfFile<CR>
-
+nnoremap <leader>g :Grepper -tool git<cr>
 
 " Use <c-space> to trigger completion.
 if has('nvim')
