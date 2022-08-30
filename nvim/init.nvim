@@ -29,6 +29,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'ryanoasis/vim-devicons' "Vim icon
 Plug 'rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'mhinz/vim-grepper' " Search word in project
+Plug 'ntpeters/vim-better-whitespace'
 
 set encoding=UTF-8
 call plug#end()
