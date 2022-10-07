@@ -9,8 +9,8 @@
 :set listchars=tab:>-
 :set guifont=DroidSansMono\ Nerd\ Font\ 11
 :tnoremap <Esc> <C-\><C-n>
-:nnoremap H gT
-:nnoremap L gt
+":nnoremap H gT
+":nnoremap L gt
 
 let mapleader=";"
 
@@ -24,27 +24,41 @@ Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' } " Find file
 Plug 'https://github.com/szw/vim-maximizer' " Maximizer
 Plug 'jiangmiao/auto-pairs' " auto pairs { [ ( ...
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'tc50cal/vim-terminal' " Vim Terminal
 Plug 'ryanoasis/vim-devicons' "Vim icon
 Plug 'rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'mhinz/vim-grepper' " Search word in project
 Plug 'sbdchd/neoformat' " NeoVim format code
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'Yggdroot/indentLine'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'golang/lint'
+Plug 'jistr/vim-nerdtree-tabs'
+
 
 set encoding=UTF-8
 call plug#end()
 
 :colorscheme meta5
 
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+"nnoremap <C-n> :NERDTree<CR>
+"nnoremap <C-t> :NERDTreeToggle<CR>
+
+nnoremap <C-Right> <C-W>l<C-W><CR>
+nnoremap <C-Left> <C-W>h<C-W><CR>
+nnoremap <C-Up> gT<CR>
+nnoremap <C-Down> gt<CR>
+
+
+
+
+nnoremap <C-t> :NERDTreeTabsToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
-nnoremap <C-f> :LeaderfFile<CR>
+nnoremap <C-f> :CocCommand fzf-preview.ProjectFiles<CR>
 nnoremap <leader>g :Grepper -tool git<CR>
 nnoremap <leader>p :CocCommand pydocstring.runFile<CR>
 nnoremap <leader>o :CocCommand pyright.organizeimports<CR>
-nnoremap <leader>t :CocCommand python.createTerminal<CR>
+nnoremap <leader>t :CocCommand terminal.Toggle<CR>
 
 " Remap keys for applying codeAction to the current buffer.
 nmap <leader>ac  <Plug>(coc-codeaction)
