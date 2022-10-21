@@ -4,6 +4,21 @@ sudo apt install zsh
 sudo apt-get install powerline fonts-powerline
 ```
 
+### Install ZSH without root
+```
+
+wget -O zsh.tar.xz https://sourceforge.net/projects/zsh/files/latest/download
+
+cd $HOME && mkdir zsh && unxz zsh.tar.xz && tar -xvf zsh.tar -C zsh --strip-components 1
+cd zsh
+
+./configure --prefix=$HOME/zsh
+make
+make install
+
+echo 'export PATH=$HOME/zsh/bin:$PATH' >> ~/.bashrc
+```
+
 ### Clone the Oh My Zsh Repo
 ```
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
