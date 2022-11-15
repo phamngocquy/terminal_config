@@ -1,4 +1,4 @@
-# Personal terminal_config
+# Personal terminal configuration
 Include: 
   - I3wm - window manager
   - tmux - terminal session manager
