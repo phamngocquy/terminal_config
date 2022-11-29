@@ -40,8 +40,6 @@ Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 set encoding=UTF-8
 call plug#end()
 
-:colorscheme meta5
-
 "nnoremap <C-n> :NERDTree<CR>
 "nnoremap <C-t> :NERDTreeToggle<CR>
 
@@ -139,4 +137,4 @@ let g:format_python_autopep8 = {
 let g:neoformat_enabled_python = ['autopep8', 'docformatter']
 "let g:neoformat_verbose = 1
 
-
+:colorscheme onedark
