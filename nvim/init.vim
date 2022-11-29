@@ -34,6 +34,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'golang/lint'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 
 
 set encoding=UTF-8
@@ -106,6 +107,10 @@ endif
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 
+"minimap
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
 
 "airline config
 if !exists('g:airline_symbols')
