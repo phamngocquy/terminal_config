@@ -51,7 +51,7 @@ nnoremap <C-Down> gt<CR>
 
 
 
-nnoremap <C-t> :NERDTreeTabsToggle<CR>
+
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 nnoremap <C-f> :CocCommand fzf-preview.ProjectFiles<CR>
 nnoremap <leader>g :Grepper -tool git<CR>
@@ -136,5 +136,9 @@ let g:format_python_autopep8 = {
             \ }
 let g:neoformat_enabled_python = ['autopep8', 'docformatter']
 "let g:neoformat_verbose = 1
+
+" NerdTree
+nnoremap <C-t> :NERDTreeTabsToggle<CR>
+nnoremap <leader>l :NERDTreeFind<CR>  
 
 :colorscheme onedark
